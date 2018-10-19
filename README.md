@@ -5,7 +5,7 @@ Simple Mustache template, only with '{{' and '}}'
 
 Simple Mustache, just with start and end point, default was `{{` and `}}`,
 
-e.g: Hi, my name is {{ name }} and come from {{ country }}, {{ age }} years old.
+e.g: Hi, my name is {{ template }} and come from {{ country }}, {{ age }} years old.
 
 now, with an object implement `Parseable` interface:
 
@@ -35,11 +35,13 @@ public class Student implements Parseable {
 then, use this way: 
 
 ```java
-Template template = new Template("tp_name", "Hi, my name is {{ name }} and come from {{ country }}, {{ age }} years old.");
+Template template = new Template("tp_name", "Hi, my name is {{ template }} and come from {{ country }}, {{ age }} years old.");
 Formatter formatter = new Formatter(template);
 Student student = new Student("dylan", "china", 24);
 System.out.println(formatter.parse(student, "tp_name"));
 ```
+
+> {{ template }} use @Field annotation mapped to property name 
 
 you'll get result like this:
 
