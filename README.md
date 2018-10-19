@@ -1,8 +1,4 @@
 # Formatter
-Simple Mustache template, only with '{{' and '}}'
-
-=
-
 Simple Mustache, just with start and end point, default was `{{` and `}}`,
 
 e.g: Hi, my name is {{ template }} and come from {{ country }}, {{ age }} years old.
