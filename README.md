@@ -38,7 +38,7 @@ then, use this way:
 Template template = new Template("tp_name", "Hi, my name is {{ name }} and come from {{ country }}, {{ age }} years old.");
 Formatter formatter = new Formatter(template);
 Student student = new Student("dylan", "china", 24);
-System.out.println(formatter.parse(student, "t"));
+System.out.println(formatter.parse(student, "tp_name"));
 ```
 
 you'll get result like this:
